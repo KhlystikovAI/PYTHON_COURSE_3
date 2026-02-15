@@ -63,12 +63,23 @@ class ExchangeRateApiClient(BaseApiClient):
         
         try:
             response = requests.get(url, timeout=parser_config.REQUEST_TIMEOUT)
-            data = response.json()
-            if response.status_code != 200 or data.get('result') != 'success':
-                error_msg = data.get('error-type', 'Unknown error')
+            response.raise_for_status()
+
+            try:
+                data = response.json()
+            except ValueError as e:
+                body = (response.text or "")[:200]
+                raise ApiRequestError(
+                    f"ExchangeRate-API: некорректный JSON в ответе. Ответ: {body}"
+                ) from e
+
+            if data.get("result") != "success":
+                error_msg = data.get("error-type", "Unknown error")
                 raise ApiRequestError(f"ExchangeRate-API: {error_msg}")
+
         except requests.RequestException as e:
-            raise ApiRequestError(f"ExchangeRate-API: {str(e)}")
+            raise ApiRequestError(f"ExchangeRate-API: {str(e)}") from e
+
 
         result = {}
         now = datetime.utcnow().isoformat()

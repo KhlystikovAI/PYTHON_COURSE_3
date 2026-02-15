@@ -51,7 +51,7 @@ portfolios.json
 __pycache__/
 *.pyc
 .env
-
+demo.cast
 
 # Installer logs
 pip-log.txt

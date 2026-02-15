@@ -58,6 +58,7 @@ class SettingsLoader:
             'VALUTATRADE_RATES_TTL': 'rates_ttl_seconds',
             'VALUTATRADE_LOG_LEVEL': 'log_level',
             'VALUTATRADE_BASE_CURRENCY': 'default_base_currency',
+            'EXCHANGERATE_API_KEY': 'exchangerate_api_key',
         }
         
         for env_var, setting_key in env_mapping.items():

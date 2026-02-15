@@ -3,11 +3,12 @@
 import os
 from dataclasses import dataclass
 from typing import Dict, Tuple
-
+from ..infra.settings import settings
 
 @dataclass
 class ParserConfig:
-    EXCHANGERATE_API_KEY: str = os.getenv("EXCHANGERATE_API_KEY")
+    EXCHANGERATE_API_KEY: str = settings.get("exchangerate_api_key")
+
 
     COINGECKO_URL: str = "https://api.coingecko.com/api/v3/simple/price"
     EXCHANGERATE_API_URL: str = "https://v6.exchangerate-api.com/v6"
