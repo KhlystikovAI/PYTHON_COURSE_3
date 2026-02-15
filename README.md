@@ -83,6 +83,10 @@ Linux / WSL:
 
 export EXCHANGERATE_API_KEY=your_api_key_here
 
+## Демонстрация asciinema
+
+[asciicast](https://disk.yandex.ru/d/QjH73Wi98S25DQ)
+
 ---
 **Разработчик:** Хлыстиков Валерий 
 **Группа:** М25-555  
