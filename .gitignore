@@ -46,6 +46,7 @@ data/users.json
 data/portfolios.json
 data/
 users.json
+rates.json
 portfolios.json
 __pycache__/
 *.pyc

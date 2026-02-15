@@ -73,6 +73,15 @@ finalproject_Khlystikov_M25-555/
 
 все JSON-файлы лежат в каталоге data (настраивается data_directory)
 rates.json должен быть в data/rates.json
+Для обновления фиатных курсов требуется API ключ сервиса ExchangeRate-API.
+
+Получите ключ на https://www.exchangerate-api.com/
+
+Перед запуском приложения установите переменную окружения:
+
+Linux / WSL:
+
+export EXCHANGERATE_API_KEY=your_api_key_here
 
 ---
 **Разработчик:** Хлыстиков Валерий 
