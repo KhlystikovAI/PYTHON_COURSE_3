@@ -44,9 +44,7 @@ MANIFEST
 # 
 data/users.json
 data/portfolios.json
-data/rates.json
 data/
-rates.json
 users.json
 portfolios.json
 __pycache__/
